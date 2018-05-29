@@ -19,7 +19,13 @@ get '/morestuff' do
   erb "Hi there <%= 'george'.upcase %>!"
 end
 
-get '/cat' do
+get '/random-cat' do
   @name = ['Amigo', 'Tintin', 'Johnson'].sample
+  erb(:index)
+end
+
+get '/named-cat' do
+  p params
+  @name = params[:name]
   erb(:index)
 end
