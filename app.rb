@@ -10,18 +10,16 @@ get '/secret'do
 end
 
 get '/evenmoresecret' do
-  "super secret stuff"
-  "<div style='border: 100px dotted turquoise'>
-    <img src='https://pbs.twimg.com/profile_images/948761950363664385/Fpr2Oz35_400x400.jpg'>
-    </div>"
+  @dogname = ['Bruce', 'Bonzo', 'Fred'].sample
+  erb(:index2)
 end
 
 get '/morestuff' do
   "smore"
+  erb "Hi there <%= 'george'.upcase %>!"
 end
 
 get '/cat' do
-  "<div style='border: 100px dotted turquoise'>
-    <img src='http://bit.ly/1eze8aE'>
-    </div>"
+  @name = ['Amigo', 'Tintin', 'Johnson'].sample
+  erb(:index)
 end
