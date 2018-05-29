@@ -5,7 +5,7 @@ get '/' do
   "hello!"
 end
 
-get '/secret'do
+get '/secret' do
   "Some secret shit"
 end
 
@@ -24,8 +24,16 @@ get '/random-cat' do
   erb(:index)
 end
 
-get '/named-cat' do
+post '/named-cat' do
   p params
   @name = params[:name]
   erb(:index)
 end
+
+get '/cat_form' do
+  erb(:cat_form)
+end
+#
+# get '/named-cat' do
+#   erb(:index)
+# end
